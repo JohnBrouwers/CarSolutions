@@ -37,5 +37,22 @@ namespace CarsUnitTests
             //Assert
             Assert.Same(expectedCarSound, actualCarSound);
         }
+
+        [Fact]
+        public void EenPlusEenIsTwee() 
+        {
+            //Arrange
+            var one = 1;
+            var anotherOne = 1;
+            var actualResult = 0;
+            var expectedResult = 3;
+
+            //Act
+            actualResult = one + anotherOne;
+
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
     }
 }

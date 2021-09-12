@@ -9,6 +9,7 @@ namespace Cars.Engines
     public abstract class Engine
     {
         protected readonly string sound = string.Empty;
+
         public string Start() => sound;
 
         protected Engine(string sound) => this.sound = sound;

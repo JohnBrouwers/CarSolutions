@@ -9,6 +9,7 @@ namespace Cars.Engines
     public class ElectricEngine: Engine
     {
         private const string electricSound = "zoom";
+
         public ElectricEngine() : base(electricSound)
         {
 

@@ -40,6 +40,7 @@ namespace CarConsole_V2
         private const string electricSound = "zoom";
 
         public string Start() => sound;
+
         public Car(Type carType) => sound = carType switch
         {
             Type.Petrol => petrolSound,
@@ -47,11 +48,31 @@ namespace CarConsole_V2
             Type.Electric => electricSound,
             _ => throw new NotImplementedException(),
         };
+
+        //bovenstaande is zelfde als
+
+        //public Car(Type cartype)
+        //{
+        //    switch (cartype)
+        //    {
+        //        case Type.Petrol:
+        //            sound = "vroom";
+        //            break;
+        //        case Type.Diesel:
+        //            sound = "prut";
+        //            break;
+        //        case Type.Electric:
+        //            sound = "zoom";
+        //            break;
+        //        default:
+        //            throw new NotImplementedException($"CarType {nameof(cartype)} missing");
+        //    }
+        //}
     }
 }
 
 //Voordelen
-// - De program kiest een type motor/auto en wordt beperkt door de in de enum opgenomen opties 
+// - In de program class kies je een type motor/auto en wordt je beperkt door de in de enum opgenomen opties 
 
 
 //Nadelen

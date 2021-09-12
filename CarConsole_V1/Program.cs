@@ -26,17 +26,19 @@ namespace CarConsole
     class Car
     {
         private readonly string sound = string.Empty;
+
         public string Start() => sound;
+
         public Car(string sound) => this.sound = sound;
     }
 }
 
 //Voordelen
-// - Een toekomstige auto kan makkelijk aangemaakt worden door enkel een nieuwe 'sound' waarde in de constructor mee te geven
-// - De uitbreiding van gasgeven en stoppen zou via de constructor van de auto gedaan moeten worden
+// - Een toekomstige auto kan makkelijk aangemaakt worden door enkel een nieuwe geluid in de constructor mee te geven
           
 
 //Nadelen
-// - Het resultaat van de auto/motor wordt door de program bepaald en deze zijn niet beperkt tot de voorgeschreven geluiden
+// - Het geluid resultaat van de auto/motor wordt door de program class bepaalt en deze zijn niet beperkt tot de in voorlopinge in de opdracht voorgeschreven geluiden
+// - De 'geluiden' van gasgeven en stoppen zouden ook in de constructor van de auto gedaan moeten worden, dit worden vele parameters..
 // - We hebben één auto definitie, voor alle verschillende soorten van auto's
 // - Alleen aan het geluid kan afgeleid worden met welk type auto we te maken hebben

@@ -6,6 +6,7 @@ namespace Cars
     public class Car<TEngine> where TEngine: Engine, new()
     {
         private readonly TEngine engine = null;
+
         public Car()
         {
             this.engine = new TEngine();

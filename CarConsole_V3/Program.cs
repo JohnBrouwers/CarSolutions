@@ -22,14 +22,17 @@ namespace CarConsole_V3
     abstract class CarBase
     {
         private readonly string sound = string.Empty;
-        public string Start() => sound;
+
         protected CarBase(string sound) => this.sound = sound;
+
+        public string Start() => sound;
     }
 
     class PetrolCar : CarBase
     {
-        private const string sound = "vroom";
-        public PetrolCar(): base(sound)
+        private const string petrolSound = "vroom";
+
+        public PetrolCar(): base(petrolSound)
         {
 
         }
@@ -37,6 +40,7 @@ namespace CarConsole_V3
     class DieselCar : CarBase
     {
         private const string sound = "prut";
+
         public DieselCar(): base(sound)
         {
 
@@ -45,6 +49,7 @@ namespace CarConsole_V3
     class ElectricCar : CarBase
     {
         private const string sound = "zoom";
+
         public ElectricCar(): base(sound)
         {
 
@@ -53,7 +58,7 @@ namespace CarConsole_V3
 }
 //Voordelen
 // - Iedere auto bevat alleen de code die nodig is voor het geluid
-// - Er dient een nieuwe auto definitie gemaakt te worden voor een nieuwe auto
+// - Er dient een nieuwe auto definitie gemaakt te worden voor elk nieuw type auto
 // - Aan de auto classe is af te lezen met welke soort van auto we te maken hebben
 
 //Nadelen
